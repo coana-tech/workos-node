@@ -31,6 +31,8 @@ jobs:
             --lightweight-reachability \
             --disable-report-submission \
             --repo-url https://github.com/${{github.repository}}
+      - run: |
+          ls -lah node_modules
       - name: Checkout the current branch
         uses: actions/checkout@v4
       - name: Run Coana on the current branch
