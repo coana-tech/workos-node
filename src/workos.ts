@@ -43,6 +43,8 @@ const HEADER_AUTHORIZATION = 'Authorization';
 const HEADER_IDEMPOTENCY_KEY = 'Idempotency-Key';
 const HEADER_WARRANT_TOKEN = 'Warrant-Token';
 
+console.log('change');
+
 export class WorkOS {
   readonly baseURL: string;
   readonly client: HttpClient;
