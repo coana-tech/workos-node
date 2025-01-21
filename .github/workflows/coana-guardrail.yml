@@ -31,14 +31,9 @@ jobs:
             --lightweight-reachability \
             --disable-report-submission \
             --repo-url https://github.com/${{github.repository}}
-      - run: |
-          ls -lah node_modules
-          ls -lah node_modules/jest-environment-node
-
       # Reset permissions before the second checkout
       - name: Reset file permissions
         run: sudo chown -R $USER:$USER .
-
       - name: Checkout the current branch
         uses: actions/checkout@v4
       - name: Run Coana on the current branch
